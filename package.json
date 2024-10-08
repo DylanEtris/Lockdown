@@ -4,7 +4,7 @@
   "description": "Periodically lock VSCode",
   "version": "0.0.1",
   "engines": {
-    "vscode": "^1.94.0"
+    "vscode": "^1.82.0"
   },
   "categories": [
     "Other"
@@ -14,8 +14,16 @@
   "contributes": {
     "commands": [
       {
-        "command": "lockdown.helloWorld",
-        "title": "Hello World"
+        "command": "vscode-lock.start_lockdown_timer",
+        "title": "Lockdown: Start Lockdown Interval"
+      },
+      {
+        "command": "vscode-lock.stop_lockdown_timer",
+        "title": "Lockdown: Stop Lockdown Interval"
+      },
+      {
+        "command": "vscode-lock.lock",
+        "title": "Lockdown: Trigger Lockdown"
       }
     ]
   },
@@ -28,14 +36,18 @@
     "test": "vscode-test"
   },
   "devDependencies": {
-    "@types/vscode": "^1.94.0",
     "@types/mocha": "^10.0.8",
     "@types/node": "20.x",
+    "@types/vscode": "^1.82.0",
     "@typescript-eslint/eslint-plugin": "^8.7.0",
     "@typescript-eslint/parser": "^8.7.0",
-    "eslint": "^9.11.1",
-    "typescript": "^5.6.2",
     "@vscode/test-cli": "^0.0.10",
-    "@vscode/test-electron": "^2.4.1"
+    "@vscode/test-electron": "^2.4.1",
+    "eslint": "^9.11.1",
+    "typescript": "^5.6.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/DylanEtris/Lockdown"
   }
 }
